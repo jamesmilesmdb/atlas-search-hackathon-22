@@ -15,7 +15,7 @@ You can clone this repository to easily track each of the tasks and to simplify 
 
 Link to the presented deck with included instructions [here](https://docs.google.com/presentation/d/19pNnkgaQd7z3RDX9f71KL2ZodbzogZzNoWGGbjBPrDs/edit#slide=id.g118e2757ad8_0_2560)
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://www.mongodb.com/atlas/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -55,6 +55,8 @@ Below are the steps needed to get started with the Atlas Search Hackathon.
    ```sh
    mongorestore --uri "mongodb+srv://username:password@your-atlas-uri.net/" /dump-directory
    ```
+4. (Optional) Install the MongoDB Visual Studio Code extension from [https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
+   [![Vscode Screen Shot][vscode-screenshot]](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -82,3 +84,4 @@ Artem Adams - [artem.adams@mongodb.com](mailto:artem.adams@mongodb.com)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: https://webimages.mongodb.com/_com_assets/cms/ktxaqsnnbqbx3o876-search_Slalom2.svg?ixlib=js-3.5.1&auto=format%2Ccompress&w=594
+[vscode-screenshot]: https://github.com/mongodb-js/vscode/raw/main/resources/screenshots/query-translator.png
