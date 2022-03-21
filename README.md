@@ -37,8 +37,8 @@ Link to the presented deck with included instructions [here](https://docs.google
     - [ ] There are 16 *sponsored* products in the data set. Build a compound search query to find these items and increase their score so they are returned first
     - [ ] Create a new search index to allow for the autocomplete data type on only the product’s name field
     - [ ] Create autocompletion for product names and an aggregation pipeline which returns 10 products based on a partial product name
-    - [ ] Searching the store for “carpet” brings limited results, unlike “rugs.” Create a Synonym source collection to allow “carpet” to be matched to “rug”
-    - [ ] Build a search pipeline that will return a “rug” when looking for “carpet.”
+    - [ ] Searching the store for “carpet” brings limited results, unlike “rugs”. Create a Synonym source collection to allow “carpet” to be matched to “rug”
+    - [ ] Build a search pipeline that will return a “rug” when looking for “carpet”
 
 - Expose the created features as secure APIs for Frontend Apps (REST API, Realm Functions, GraphQL)
     - [ ] Create an API to query for products using the autocomplete aggregation
