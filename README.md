@@ -31,9 +31,15 @@ Link to the presented deck with included instructions [here](https://docs.google
     - [ ] Add a field for each document representing how often it was added to a wishlist
     - [ ] Create a function which adds a product to the users wishlist and updates the count how often it was added to a wishlist (demonstrate triggers usage)
 - Atlas Search (Autocomplete, Compound, Facets, Multi)
-    - [ ] Create an index for autocompletion on product names and an aggregation pipeline which returns 10 products based on a partial product name (bonus support multiple languages)
-    - [ ] Calculate the number of products for each category with search facets
-    - [ ] Search for products based on multiple fields
+    - [ ] Build a search pipeline that uses $search to query for products across the name field and returns the top 12 matches
+    - [ ] Expand your search pipeline to search across multiple fields allowing for misspelled words
+    - [ ] Build a search pipeline that combines 2 or more search operators
+    - [ ] There are 16 *sponsored* products in the data set. Build a compound search query to find these items and increase their score so they are returned first
+    - [ ] Create a new search index to allow for the autocomplete data type on only the product’s name field
+    - [ ] Create autocompletion for product names and an aggregation pipeline which returns 10 products based on a partial product name
+    - [ ] Searching the store for “carpet” brings limited results, unlike “rugs.” Create a Synonym source collection to allow “carpet” to be matched to “rug”
+    - [ ] Build a search pipeline that will return a “rug” when looking for “carpet.”
+
 - Expose the created features as secure APIs for Frontend Apps (REST API, Realm Functions, GraphQL)
     - [ ] Create an API to query for products using the autocomplete aggregation
     - [ ] Create an API to add and remove products to the users wishlist
