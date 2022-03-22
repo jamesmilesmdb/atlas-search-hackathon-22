@@ -4,16 +4,26 @@
 
 This is a solution template for the Atlas Search Hackaton. 
 
-You can clone this repository to easily track each of the tasks and to simplify the submission of your solutions.
+This hackathon is designed for developers, with previous knowledge of setting up MongoDB environments, with an interest in adding search functionality to make their data even more accessible.
 
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+<ol>
+ <li><a href="#about-the-project">About The Project</a></li>
+ <li><a href="#hackathon-challenges">Hackathon Challenges</a></li>
+ <li><a href="#getting-started">Getting Started</a></li>
+ <li><a href="#submission">Submission Guide</a></li>
+ <li><a href="#contact">Contact</a></li>
+</ol>
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Link to the presented deck with included instructions [here](https://docs.google.com/presentation/d/19pNnkgaQd7z3RDX9f71KL2ZodbzogZzNoWGGbjBPrDs/edit#slide=id.g118e2757ad8_0_2560)
+**What is MongoDB Atlas Search?**
+
+Atlas Search is an embedded full-text search in MongoDB Atlas that gives you a seamless, scalable experience for building relevance-based app features. Built on Apache Lucene, Atlas Search eliminates the need to run a separate search system alongside your database.
 
 [![Product Name Screen Shot][product-screenshot]](https://www.mongodb.com/atlas/search)
 
@@ -50,18 +60,23 @@ Link to the presented deck with included instructions [here](https://docs.google
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Below are the steps needed to get started with the Atlas Search Hackathon.
+Below are the steps needed to get started with the Atlas Search Hackathon. The presented slides with instructions included can be found here: 
+[MongoDB - SA Hackathon Atlas Search 2022](https://docs.google.com/presentation/d/19pNnkgaQd7z3RDX9f71KL2ZodbzogZzNoWGGbjBPrDs/edit#slide=id.g118e2757ad8_0_2560)
+
+A frontend application will be hosted on GitHub and ready for you to fork.
 
 1. Create a free Atlas account at [https://cloud.mongodb.com/](https://cloud.mongodb.com/)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Load the provided dataset
+2. Create a free M0 cluster and follow the steps to add a database user
+3. Download and install [MongoDB Compass](https://docs.mongodb.com/compass/current/install/) and [MongoDB CLI Database Tools](https://www.mongodb.com/try/download/database-tools)
+4. Load the provided dataset
    ```sh
    mongorestore --uri "mongodb+srv://username:password@your-atlas-uri.net/" /dump-directory
    ```
-4. (Optional) Install the MongoDB Visual Studio Code extension from [https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
+5. Clone the repo
+   ```sh
+   git clone https://github.com/github_username/repo_name.git
+   ```
+6. (Optional) Install the MongoDB Visual Studio Code extension from [https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
    [![Vscode Screen Shot][vscode-screenshot]](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
