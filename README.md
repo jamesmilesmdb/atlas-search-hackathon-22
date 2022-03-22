@@ -9,6 +9,7 @@ This hackathon is designed for developers, with previous knowledge of setting up
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
+
 <ol>
  <li><a href="#about-the-project">About The Project</a></li>
  <li><a href="#getting-started">Getting Started</a></li>
@@ -33,7 +34,7 @@ Atlas Search is an embedded full-text search in MongoDB Atlas that gives you a s
 
 ## Getting Started
 
-Below are the steps needed to get started with the Atlas Search Hackathon. The presented slides with instructions included can be found here: 
+Below are the steps needed to get started with the Atlas Search Hackathon. The presented slides with instructions included can be found here:
 [MongoDB - SA Hackathon Atlas Search 2022](https://docs.google.com/presentation/d/19pNnkgaQd7z3RDX9f71KL2ZodbzogZzNoWGGbjBPrDs/edit#slide=id.g118e2757ad8_0_2560)
 
 A frontend application will be hosted on GitHub and ready for you to fork.
@@ -45,11 +46,13 @@ A frontend application will be hosted on GitHub and ready for you to fork.
     git clone https://github.com/jamesmilesmdb/atlas-search-hackathon-22.git
     ```
 4. Load the provided dataset
-Unzip the file `mongoshop-data.zip` from this repository and run the following command.
-You can get the `mongorestore` binary utility from [here](https://www.mongodb.com/try/download/database-tools)
+   Unzip the file `mongoshop-data.zip` from this repository and run the following command.
+   You can get the `mongorestore` binary utility from [here](https://www.mongodb.com/try/download/database-tools)
+
 ```sh
 mongorestore --uri "mongodb+srv://username:password@your-atlas-uri.net/" /dump
-  ```
+```
+
 5. Download and install MongoDB Compass
 
     Unzip the file `mongoshop-data.zip` from this repository and run the following command.
@@ -96,6 +99,18 @@ mongorestore --uri "mongodb+srv://username:password@your-atlas-uri.net/" /dump
 2. Create your Branch (`git checkout -b solution/TeamX`)
 3. Commit your Changes (`git commit -m 'Added solution to challenge X'`)
 4. Push to the Branch (`git push origin solution/TeamX`)
+
+In case you have also created a MongoDB Realm App for the Hackathon, please make sure to export your Realm App as well.
+
+### Steps
+
+1. Visit the Realm App in your browser and click **Deployments** in the sidebar.
+1. Click **Export App**.
+1. Click the **Export App** button in the Export App as a .zip file section.
+1. Commit the .zip file to the fork of this repository
+1. Push the changes.
+
+![Export Realm App](/docs/export-realm-app.png?raw=true "Export Realm App")
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
