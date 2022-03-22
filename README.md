@@ -26,7 +26,11 @@ This hackathon is designed for developers, with previous knowledge of setting up
 
 Atlas Search is an embedded full-text search in MongoDB Atlas that gives you a seamless, scalable experience for building relevance-based app features. Built on Apache Lucene, Atlas Search eliminates the need to run a separate search system alongside your database.
 
-[![Product Name Screen Shot][product-screenshot]](https://www.mongodb.com/atlas/search)
+<div align="center">
+  <a href="https://www.mongodb.com/atlas/search">
+    <img src="https://webimages.mongodb.com/_com_assets/cms/ktxaqsnnbqbx3o876-search_Slalom2.svg?ixlib=js-3.5.1&auto=format%2Ccompress&w=594" alt="Logo" width="auto" height="500">
+  </a>
+</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
