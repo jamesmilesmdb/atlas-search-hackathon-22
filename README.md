@@ -99,10 +99,9 @@ mongorestore --uri "mongodb+srv://username:password@your-atlas-uri.net/" /dump
 
 ## Submission
 
-1. Fork the Project
-2. Create your Branch (`git checkout -b solution/TeamX`)
-3. Commit your Changes (`git commit -m 'Added solution to challenge X'`)
-4. Push to the Branch (`git push origin solution/TeamX`)
+1. Clone this repository `git clone https://github.com/jamesmilesmdb/atlas-search-hackathon-22.git`
+1. Invite your MongoDB facilitator as a contributor to your repository
+1. Submit a short screen/video recording of your solutions in action to the Google Drive folder you have been invited to
 
 In case you have also created a MongoDB Realm App for the Hackathon, please make sure to export your Realm App as well.
 
@@ -111,7 +110,7 @@ In case you have also created a MongoDB Realm App for the Hackathon, please make
 1. Visit the Realm App in your browser and click **Deployments** in the sidebar.
 1. Click **Export App**.
 1. Click the **Export App** button in the Export App as a .zip file section.
-1. Commit the .zip file to the fork of this repository
+1. Commit the .zip file to the clone of this repository
 1. Push the changes.
 
 ![Export Realm App](/docs/export-realm-app.png?raw=true "Export Realm App")
