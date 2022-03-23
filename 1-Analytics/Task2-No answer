@@ -1,0 +1,10 @@
+[{$match: {
+ answer_aggregated: 'no'
+}}, {$limit: 10}, {$project: {
+ asin: '$asin'
+}}, {$lookup: {
+ from: 'products',
+ localField: 'asin',
+ foreignField: 'item_id',
+ as: 'products'
+}}]

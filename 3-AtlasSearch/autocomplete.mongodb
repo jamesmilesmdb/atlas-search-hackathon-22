@@ -1,0 +1,37 @@
+/*
+/   Autocompletion for product names and an aggregation pipeline
+/   which returns 10 products based on a partial product name
+*/
+
+[{$search: {
+ autocomplete: {
+  query: 'iphn',
+  path: 'name',
+  fuzzy: {
+   maxEdits: 1,
+   prefixLength: 1,
+   maxExpansions: 256
+  }
+ }
+}}, {$limit: 10}, {$project: {
+ name: 1
+}}]
+
+/*
+/   Search index used for autocompletion
+*/
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "name": [
+        {
+          "foldDiacritics": false,
+          "maxGrams": 7,
+          "minGrams": 3,
+          "tokenization": "edgeGram",
+          "type": "autocomplete"
+        }
+      ]
+    }
+  }

@@ -1,0 +1,32 @@
+//Schema of new User collection.
+
+{
+  "title": "user",
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "orders": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "item_id": {
+            "bsonType": "string"
+          }
+        }
+      }
+    },
+    "wishlist": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "item_id": {
+            "bsonType": "string"
+          }
+        }
+      }
+    }
+  }
+}

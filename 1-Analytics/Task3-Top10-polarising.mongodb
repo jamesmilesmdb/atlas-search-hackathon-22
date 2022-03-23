@@ -1,0 +1,63 @@
+[{$lookup: {
+    from: 'reviews',
+    localField: 'item_id',
+    foreignField: 'asin',
+    as: 'reviews'
+   }}, {$project: {
+    item_id: 1,
+    reviews: 1
+   }}, {$unwind: {
+    path: '$reviews',
+    preserveNullAndEmptyArrays: false
+   }}, {$group: {
+    _id: '$item_id',
+    stddev: {
+     $stdDevPop: '$reviews.overall'
+    },
+    review_mean: {
+     $avg: '$reviews.overall'
+    },
+    review_count: {
+     $sum: 1
+    }
+   }}, {$match: {
+    review_count: {
+     $gt: 200
+    }
+   }}, {$addFields: {
+    polarisation: {
+     $divide: [
+      '$stddev',
+      {
+       $multiply: [
+        {
+         $subtract: [
+          '$review_mean',
+          1
+         ]
+        },
+        {
+         $subtract: [
+          5,
+          '$review_mean'
+         ]
+        },
+        {
+         $divide: [
+          '$review_count',
+          {
+           $subtract: [
+            '$review_count',
+            1
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   }}, {$sort: {
+    polarisation: -1
+   }}, {$limit: 10}]
+   
