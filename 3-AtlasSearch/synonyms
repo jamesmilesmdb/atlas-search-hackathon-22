@@ -1,0 +1,41 @@
+/*
+/  Search pipeline that will return a “rug” when looking for “carpet”
+*/
+
+[{$search: {
+ index: 'syn',
+ text: {
+  query: 'carpet',
+  path: 'name',
+  synonyms: 'synmapping'
+ }
+}}, {$project: {
+ name: 1
+}}]
+
+
+/*
+/   Search index used for the pipeline
+*/
+{
+  "analyzer": "lucene.standard",
+  "searchAnalyzer": "lucene.standard",
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "name": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      }
+    }
+  },
+  "synonyms": [
+    {
+      "analyzer": "lucene.standard",
+      "name": "synmapping",
+      "source": {
+        "collection": "synonims"
+      }
+    }
+  ]
+}
