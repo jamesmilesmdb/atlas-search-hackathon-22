@@ -1,0 +1,68 @@
+*/
+const index = "product-search-index";
+const database = "test"
+
+use(database)
+
+let searchTerm = "T-Shirt"
+let categoryFilter = ["Clothing"]
+
+db.products.aggregate([
+  {
+    $search: {
+      index: index,
+      compound: {
+        must: [
+          {
+            text: {
+              query: searchTerm,
+              path: ["name", "item_keywords.value"],
+              fuzzy: {
+                maxEdits: 2,
+                prefixLength: 0,
+                maxExpansions: 50
+              }
+            }
+          }
+        ],
+        should: [
+          {
+            text: {
+              query: "platinum",
+              path: "promotionStatus",
+              score: {
+                constant: {
+                  value: 100
+                }
+              }
+            }
+          }
+        ],
+        filter: [
+          {
+            text: {
+              "query": categoryFilter,
+              "path": "category"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+	  $project: {
+      item_id: "$item_id",
+      brand: "$brand",
+		  name: "$name",
+		  score: { $meta: "searchScore" }
+	  }
+  },
+  {
+	  $sort: {
+		  score: -1
+	  }
+  },
+  {
+	  $limit: 12
+  }
+])
